@@ -6,9 +6,9 @@ The program is based on ros_pcl and pcl, filter and cluster the raw pointcloud d
 
 2.verify that the packages are installed successfully
 
-'''bash
+"""
     roslaunch realsense2_camera rs_camera.launch
-'''
+"""
 
 3.add the files in repository to **realsense2_camera** package.
 If the file already exits (eg.CMakeLists.txt), please substitute it.
