@@ -1,0 +1,39 @@
+<launch>
+  <node pkg="nodelet" type="nodelet" name="pcl_manager" args="manager" output="screen" />
+
+  <!-- Run a VoxelGrid filter to clean NaNs and downsample the data -->
+  <node pkg="nodelet" type="nodelet" name="voxel_grid" args="load pcl/VoxelGrid pcl_manager" output="screen">
+    <remap from="~input" to="/camera/depth/color/points" />
+    <rosparam>
+      filter_field_name: z
+      filter_limit_min: 0.01
+      filter_limit_max: 3.0
+      filter_limit_negative: False
+      leaf_size: 0.05
+    </rosparam>
+  </node>
+
+  <!-- Run a Plannar Segmentation filter -->
+  <node pkg="nodelet" type="nodelet" name="sac_plane" args="load pcl/SACSegmentation pcl_manager" output="screen">
+    <remap from="~input" to="/voxel_grid/output" />
+    <rosparam>
+      model_type: 0
+      distance_threshold: 0.04
+    </rosparam>
+  </node>
+  
+  
+
+  <!-- Extract the Inlier points -->
+  <node pkg="nodelet" type="nodelet" name="extract_plane" args="load pcl/ExtractIndices pcl_manager" output="screen">
+    <remap from="~input"   to="/voxel_grid/output" />
+    <remap from="~indices" to="/sac_plane/inliers" />
+    <rosparam>
+      negative: true
+      approximate_sync: true
+    </rosparam>
+  </node>
+
+
+
+</launch>
