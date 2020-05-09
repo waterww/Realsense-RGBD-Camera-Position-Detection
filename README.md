@@ -19,7 +19,7 @@ launch the node to publish raw pointcloud
 
 launch the nodelets to preprocess pointcloud
     
-    roslaunch realsense2_camera pcl_preprocess
+    roslaunch realsense2_camera pcl_preprocess.launch
     
 run the node to clustering pointcloud
     
