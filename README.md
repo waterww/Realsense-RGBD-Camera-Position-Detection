@@ -12,6 +12,7 @@ The program is based on ros_pcl and pcl, filter and cluster the raw pointcloud d
 If the file already exits (eg.CMakeLists.txt), please substitute it.
 
 4.run the program
+
 launch the node to publish raw pointcloud
     
     roslaunch realsense2_camera demo_poincloud.launch
