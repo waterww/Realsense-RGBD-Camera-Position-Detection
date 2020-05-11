@@ -26,3 +26,25 @@ run the node to clustering pointcloud
     rosrun realsense2_camera detection
     
 5.detected objects information is published in topic **/objectlist** as user-defined ros message
+
+# Paramters
+## pcl_preprocess.launch
+
+**filter_limit_min**:the minimum range to keep points. Z direction points outward from the camera.
+
+**filter_limit_max**:the maximum range to keep points.
+
+**distance_threshold**:the threshold of plane thickness.
+
+## detection.cpp
+
+**setClusterTolerance**:epsilon, radius to search points.
+
+**setMinClusterSize**:minmum number of points in one cluster.
+
+**setMaxClusterSize**:maximum number of points in one cluster.
+
+# Topics
+## /voxel_grid/output
+## /extract_plane/output
+## /cloud_cluster
