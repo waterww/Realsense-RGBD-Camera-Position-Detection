@@ -34,6 +34,8 @@ run the node to clustering pointcloud
 
 **filter_limit_max**: the maximum range to keep points.
 
+**leaf_size**: cube side length to down sampling.
+
 **distance_threshold**: the threshold of plane thickness.
 
 ## detection.cpp
