@@ -45,6 +45,6 @@ run the node to clustering pointcloud
 **setMaxClusterSize**:maximum number of points in one cluster.
 
 # Topics
-## /voxel_grid/output
-## /extract_plane/output
-## /cloud_cluster
+* /voxel_grid/output
+* /extract_plane/output
+* /cloud_cluster
