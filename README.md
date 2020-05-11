@@ -48,5 +48,13 @@ run the node to clustering pointcloud
 
 # Topics
 * /voxel_grid/output
+
+point cloud filtered by passthrough filter and voxel grid filter
+
 * /extract_plane/output
+
+point clould filtered by RANSAC
+
 * /cloud_cluster
+
+clustered point cloud
