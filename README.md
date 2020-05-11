@@ -30,7 +30,7 @@ run the node to clustering pointcloud
 # Paramters
 ## pcl_preprocess.launch
 
-**filter_limit_min**: the minimum range to keep points. Z direction points outward from the camera.
+**filter_limit_min**: the minimum range to keep points. z-direction points outward from the camera.
 
 **filter_limit_max**: the maximum range to keep points.
 
