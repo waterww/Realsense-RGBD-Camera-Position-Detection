@@ -27,7 +27,7 @@ run the node to clustering pointcloud
     
 5.detected objects information is published in topic **/objectlist** as user-defined ros message
 
-# Paramters
+# Parameters
 ## pcl_preprocess.launch
 
 **filter_limit_min**: the minimum range to keep points. z-direction points outward from the camera.
