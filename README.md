@@ -62,3 +62,5 @@ clustered point cloud
 ## Result
 ![image](https://github.com/waterww/Realsense-RGBD-Camera-Position-Detection/raw/master/image.jpg)
 
+The printed message is the serial number of objects and its position.
+
