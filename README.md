@@ -28,7 +28,7 @@ run the node to clustering pointcloud
 5.detected objects information is published in topic **/objectlist** as user-defined ros message
 
 ## Parameters
-'pcl_preprocess.launch'
+*pcl_preprocess.launch*
 
 **filter_limit_min**: the minimum range to keep points. z-direction points outward from the camera.
 
@@ -38,7 +38,7 @@ run the node to clustering pointcloud
 
 **distance_threshold**: the threshold of plane thickness.
 
-'detection.cpp'
+*detection.cpp*
 
 **setClusterTolerance**: epsilon, radius to search points.
 
