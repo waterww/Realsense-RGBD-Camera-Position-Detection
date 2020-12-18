@@ -1,7 +1,7 @@
 # Realsense-RGBD-Camera-Position-Detection
 The program is based on ros_pcl and pcl, filter and cluster the raw pointcloud data to get object position at 30Hz.
 
-# How to use it?
+## How to use it?
 1.install [librealsense2](http://wiki.ros.org/librealsense2) and [realsense ros](wiki.ros.org/realsense2_camera)
 
 2.verify that the packages are installed successfully
@@ -27,8 +27,8 @@ run the node to clustering pointcloud
     
 5.detected objects information is published in topic **/objectlist** as user-defined ros message
 
-# Parameters
-## pcl_preprocess.launch
+## Parameters
+'pcl_preprocess.launch'
 
 **filter_limit_min**: the minimum range to keep points. z-direction points outward from the camera.
 
@@ -38,7 +38,7 @@ run the node to clustering pointcloud
 
 **distance_threshold**: the threshold of plane thickness.
 
-## detection.cpp
+'detection.cpp'
 
 **setClusterTolerance**: epsilon, radius to search points.
 
@@ -46,7 +46,7 @@ run the node to clustering pointcloud
 
 **setMaxClusterSize**: maximum number of points in one cluster.
 
-# Topics
+## Topics
 * /voxel_grid/output
 
 point cloud filtered by passthrough filter and voxel grid filter
@@ -58,3 +58,7 @@ point clould filtered by RANSAC
 * /cloud_cluster
 
 clustered point cloud
+
+## Result
+![image](https://github.com/waterww/Realsense-RGBD-Camera-Position-Detection/raw/master/image.jpg)
+
